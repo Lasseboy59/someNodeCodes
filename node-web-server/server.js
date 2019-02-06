@@ -32,11 +32,11 @@ hbs.registerHelper('screamIt', (text) => {
 })
 
 app.get('/', (req, res) => {
-    res.render('about.hbs', {
-        pageTitle: 'Project page',
+    res.render('home.hbs', {
+        pageTitle: 'Home page',
+        welcomeMessage: 'Welcome to my home page',
     });
 });
-
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
@@ -48,13 +48,6 @@ app.get('/project', (req, res) => {
     res.render('project.hbs', {
         pageTitle: 'Project page',
         message: 'My portfolio page'
-    });
-});
-
-app.get('/home', (req, res) => {
-    res.render('home.hbs', {
-        pageTitle: 'Home page',
-        welcomeMessage: 'Welcome to my home page',
     });
 });
 
