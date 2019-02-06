@@ -26,10 +26,8 @@ geocode.geocodeAddress(argv.address, (errorMessage, results) => {
             if(errorMessage) {
                 console.log(errorMessage);
             } else {
-                let celsius = (weatherResults.temperature - 32)/1.8
-                celsius = Math.round(celsius * 100) / 100
-                let apparentCelsius = (weatherResults.apparentTemperature - 32)/1.8
-                apparentCelsius = Math.round(apparentCelsius * 100) / 100
+                let celsius = ((weatherResults.temperature - 32)/1.8).toFixed(2);
+                let apparentCelsius = ((weatherResults.apparentTemperature - 32)/1.8).toFixed(2);
                 console.log(`Temperature: ${celsius} C, the referring to (actual) ${apparentCelsius} C.`)
             }
         });
